@@ -1,0 +1,18 @@
+>docker run -it --rm -d -p 8080:20 --name testauto nginx
+*check the container/image in dockerhub
+*check the file created in specified location by ls
+>cd usr
+>ls
+>cd ngix
+>ls
+html
+(sublime text3)
+*keep a basic index.html file
+*create a dockerfile
+>FROM nginx:alpine
+>COPY . /usr/share/nginx/html
+*back to terminal
+>docker build -t testauto:v1 .
+*go to dockerhub check for container
+>docker run -d -p 80:80 testauto:v1
+*go to docker desktop run the container
