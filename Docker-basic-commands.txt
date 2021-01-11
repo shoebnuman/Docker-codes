@@ -1,0 +1,32 @@
+Docker Basic Commands:
+*docker run nginx (run a container)
+*docker ps (list container)
+*docker ps -a (to check all container running/stopped)
+*docker stop (id or name of container)
+*docker ps -a (will display it is in exited state)
+*docker rm (cont name)
+*docker ps -a (To check)
+*docker images
+*docker rmi (image name)
+To remove Image forcefully try
+*docker rmi -f (image id initial 4 digits)
+(note:must stop all dependent container associated with image before deleting image)
+*docker pull nginx (To only pull image not run the container)
+
+Attach & Detach
+*docker run kodekloud/simple-webapp
+Detach
+*docker run -d kodekloud/simple-webapp
+To attach again
+* docker attach a043d (initial id of container)   
+To run image and name it as webapp
+*docker run --name webapp nginx:1.14-alpine
+Run-tag:
+>docker run redis
+if want to run older version,specify it
+>docker run redis:4.0 etc
+Run -PORT mapping
+>docker run kodekloud/webapp
+To Run an instance of kodekloud/simple-webapp with a tag blue and map port 8080 on the container to 38282 on the host.
+
+>docker run -p 38282:8080 kodekloud/simple-webapp:blue
