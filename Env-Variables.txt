@@ -1,0 +1,11 @@
+Docker Env Variables:
+>docker run -e APP_COLOR=blue simple-webapp-color
+>docker run -e APP_COLOR=green simple-webapp-color
+>docker run -e APP_COLOR=green simple-webapp-color
+
+Q:Run a container named blue-app using image kodekloud/simple-webapp and set the environment variable APP_COLOR to blue. Make the application available on port 38282 on the host. The application listens on port 8080.
+A:Command : docker run -p 38282:8080 --name blue-app -e APP_COLOR=blue -d kodekloud/simple-webapp.
+
+Q:Deploy a mysql database using the mysql image and name it mysql-db.
+Set the database password to use db_pass123. Lookup the mysql image on Docker Hub and identify the correct environment variable to use for setting the root password.
+A:docker run -d -e MYSQL_ROOT_PASSWORD=db_pass123 --name mysql-db mysql
