@@ -1,0 +1,3 @@
+To check & previously installed docker in system
+
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
