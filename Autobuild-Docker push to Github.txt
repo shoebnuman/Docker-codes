@@ -1,0 +1,15 @@
+pushing docker image/container to gitHub.
+*create the repo in DockerHub
+*Build settings>connect to GitHub>create
+*Build>select source repo>Autotest=internal pull request
+*Enable autobuild & Build caching>save
+*create a sample html or text file with any editor(dockerfile must)
+*go to project location in terminal
+*ls> find the sample file
+*git init
+*git add .
+*git commit -m "pushing docker to git"
+*git remote set-url origin (http git repo url here)
+*git push -u origin master
+*refresh the git repo to see results
+*go to dockerhub see automated builds(refresh to see automatic trigger)
